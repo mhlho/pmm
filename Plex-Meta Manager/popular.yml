@@ -1,0 +1,146 @@
+collections:
+
+############################
+#         POPULAR          #
+############################
+
+  IMDb Top 250:
+    imdb_list: https://www.imdb.com/search/title/?groups=top_250&sort=user_rating,desc
+    sync_mode: sync
+    collection_mode: default
+    collection_order: custom
+    sort_title: "*101a"
+    summary: Movies from the server that appear on IMDB's top 250.
+    schedule: daily
+    url_poster: https://i.imgur.com/FGgT7dt.png
+    url_background: https://i.imgur.com/juAQnOG.jpg
+  Trakt Trending:
+    trakt_trending: 100
+    sync_mode: sync
+    collection_mode: default
+    collection_order: custom
+    sort_title: "*101b"
+    schedule: daily
+    url_poster: https://i.imgur.com/1qbVXLi.png
+  Top Ten Pirated Weekly:
+    trakt_list: https://trakt.tv/users/hdlists/lists/top-ten-pirated-movies-of-the-week-torrent-freak-com
+    smart_label: year.desc
+    sync_mode: sync
+    sort_title: "*101c"
+    schedule: daily
+    summary: Most Pirated Movies of The Week
+    url_background: https://i.imgur.com/juAQnOG.jpg
+    url_poster: https://i.imgur.com/DSWADRL.png
+  Movies People are Watching:
+    trakt_list: https://trakt.tv/users/hdlists/lists/top-films-everyone-s-watching
+    sort_title: "*101d"
+    sync_mode: sync
+    smart_label: year.desc
+    summary: Movies That Everyone is Watching
+    schedule: daily
+    url_poster: https://i.imgur.com/GQca9tU.png
+    url_background: https://i.imgur.com/juAQnOG.jpg
+  New Releases:
+    trakt_list: https://trakt.tv/users/giladg/lists/latest-releases
+    url_poster: https://i.ibb.co/VNwwdZQ/New-Releases.jpg
+    url_background: https://i.imgur.com/juAQnOG.jpg
+    sort_title: "*101e"
+    schedule: daily
+    sync_mode: sync
+    smart_label: critic_rating.desc
+  1001 Movies You Must See Before You Die:
+    trakt_list: https://trakt.tv/users/sp1ti/lists/1001-movies-you-must-see-before-you-die
+    summary: "1001 Movies You Must See Before You Die is a film reference book edited by Steven Jay Schneider with original essays on each film contributed by over 70 film critics."
+    url_poster: https://i.imgur.com/WmgioMY.png
+    url_background: https://i.imgur.com/rVa7jiJ.jpg
+    sync_mode: sync
+    collection_mode: default
+    collection_order: custom
+    sort_title: "*101f"
+    schedule: daily 
+
+############################
+#         DISCOVER         #
+############################
+
+  Animated Kids Most Popular:
+    tmdb_discover:
+      limit: 1000
+      with_genres: 16
+      certification_country: US
+      certification: G|PG
+      sort_by: popularity.desc
+    sync_mode: sync
+    collection_mode: default
+    collection_order: custom
+    summary: A collection of the most popular Animated Kids movies from TMDb
+    sort_title: "*150"
+    schedule: daily
+    url_poster: https://i.imgur.com/WDRj8a9.png
+    url_background: https://i.imgur.com/juAQnOG.jpg
+
+############################
+#    TRAKT COLLECTIONS     #
+############################
+
+# Made by Magic
+
+  Trending Now (Unplayed):
+    trakt_chart:
+      chart: trending
+      limit: 200
+    sort_title: "!B Trending Now"
+    url_poster: https://i.imgur.com/tnuP538.png
+    url_background: https://i.imgur.com/juAQnOG.jpg
+    sync_mode: sync
+    collection_mode: default
+    collection_filtering: user
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+    smart_label:
+      sort_by: release.desc
+      all:
+        label: <<smart_label>>
+        unplayed: true
+    schedule: daily
+  Most Watched This Week (Unplayed):
+    trakt_chart:
+      chart: watched
+      time_period: weekly
+      limit: 200
+    sort_title: "!B Watched This Week"
+    url_poster: https://i.imgur.com/2aqBTSM.png
+    url_background: https://i.imgur.com/juAQnOG.jpg
+    sync_mode: sync
+    collection_mode: default
+    collection_filtering: user
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+    smart_label:
+      sort_by: release.desc
+      all:
+        label: <<smart_label>>
+        unplayed: true
+    schedule: daily
+  Most Watched This Year (Unplayed):
+    trakt_chart:
+      chart: watched
+      time_period: yearly
+      limit: 200
+    sort_title: "!B Watched This Year"
+    url_poster: https://i.imgur.com/AdOXjVU.png
+    url_background: https://i.imgur.com/juAQnOG.jpg
+    sync_mode: sync
+    collection_mode: default
+    collection_filtering: user
+    visible_library: true
+    visible_home: true
+    visible_shared: true
+    smart_label:
+      sort_by: release.desc
+      all:
+        label: <<smart_label>>
+        unplayed: true
+    schedule: daily
